@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #D2D1D1;
 }
 
 .main {
@@ -14,6 +15,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
+
+}
+
+.nav{
+  position: absolute;
+  width: 16.7%;
+  height: 100%
+  ;
+  left: 0px;
+  top: 0px;
+  background-color: aqua;
+  
+
 }
 
 .footer {
@@ -114,6 +129,8 @@
 .logo {
   height: 1em;
 }
+
+
 
 @media (max-width: 600px) {
   .grid {
