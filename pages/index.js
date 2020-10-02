@@ -1,41 +1,32 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import link from 'next/link'
+
+
+import Nav from '../Components/Component/Nav/Nav'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Innu </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/innufavicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet" />
+
+
       </Head>
 
       <main className={styles.main}>
+
+      <Nav></Nav>
+
+
         <h1 className={styles.title}>
-          Innu
-           
-           <a href="https://nextjs.org">Next.js!
-           
-           </a>
-      
+          Dashboard      
         </h1>
 
-          <nav className={styles.nav}>
-          <ul>
-            <li>Dashboard</li>
-            <li>Población</li>
-            <li>Análisis</li>
-            <li>Filtros</li>
-            <li>Proyectos</li>
-            <li>Planes</li>
-          </ul>
-          <ul>
-            <li>Configuración</li>
-            <li>Ayuda</li>
-            <li>Salir</li>
-          </ul>
+       
 
-          </nav>
+
 
       </main>
 
