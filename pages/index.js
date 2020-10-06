@@ -1,38 +1,62 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import AppLayout from '../Components/Layout/Lay'
+import { colors } from '../Estilos/theme'
 
 
 import Nav from '../Components/Component/Nav/Nav'
 
 export default function Home() {
+  
   return (
-    <div className={styles.container}>
+    
+    <>       
       <Head>
         <title>Innu </title>
         <link rel="icon" href="/innufavicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet" />
-
-
       </Head>
 
-      <main className={styles.main}>
 
+      <main>
       <Nav></Nav>
-
-
-        <h1 className={styles.title}>
-          Dashboard      
-        </h1>
-
-       
-
-
-
+      <div>
+      <p>Dashboard</p>
+      <article>
+      <section>Hey</section>
+      <section>que</section>
+      <section>tal</section>
+      <section>soy una seccion</section>
+      </article>
+      </div>
+      
       </main>
 
       <footer>
        
       </footer>
-    </div>
+      
+
+<style jsx>{`
+
+main{
+  display: flex;
+  flex-direction: row; 
+
+}
+article{ background-color: green}
+
+section{ background-color: blue}
+
+p{ font-size:30px;
+
+}
+
+`}</style>
+
+
+ </>
   )
 }
+
+  
+  
