@@ -1,12 +1,12 @@
 import Nav from '../Components/Component/Nav/Nav'
 
 
-export default function Login (){
+export default function Ayuda (){
 return(<>
 
 
 <Nav></Nav>
-<h1>Soy login</h1>
+<h1>Soy ayuda</h1>
 
 
 <style jsx>{`

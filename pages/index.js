@@ -3,7 +3,11 @@ import AppLayout from '../Components/Layout/Lay'
 import { colors } from '../Estilos/theme'
 
 
+//import CsvReader from '../Components/Component/CsvReader/CsvReader'
+
 import Nav from '../Components/Component/Nav/Nav'
+//import Chart from '../Components/Component/Chart/Chart'
+
 
 export default function Home() {
   
