@@ -1,30 +1,30 @@
-import CSVReader from 'react-csv-reader'
+import CSVReader from "react-csv-reader"
+import * as React from "react"
 
-export default class Csv extends React.PureComponent{
-
-  constructor(props){
-    super(props);
-    this.state={
+export default class Csv extends React.PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
       data: null,
-      filterData:null,
+      filterData: null,
       uploadedData: false,
     }
   }
 
-  uploadData = ( data ) => {
-    data.shift();
-    this.setState({data, filterData:data ,uploadedData:true});
+  uploadData = (data) => {
+    data.shift()
+    this.setState({ data, filterData: data, uploadedData: true })
   }
 
   showData = () => {
-    if(!this.state.uploadedData){
+    if (!this.state.uploadedData) {
       return <p>No se ha cargado ningún archivo.</p>
-    }else {
-      return<p>{this.state.data}</p>
+    } else {
+      return <p>{this.state.data}</p>
     }
   }
 
-  render(){
+  render() {
     return (
       <div className="App">
         <CSVReader
@@ -33,11 +33,10 @@ export default class Csv extends React.PureComponent{
           onFileLoaded={this.uploadData}
         />
 
-               {//<button>Cargar archivo nuevamente</button> 
-        }     
+        {
+          // <button>Cargar archivo nuevamente</button>
+        }
       </div>
-      
-
-    );
+    )
   }
 }

@@ -1,11 +1,9 @@
-import css from 'styled-jsx/css'
+import css from "styled-jsx/css"
 
-//import {breakpoints, colors, fonts} from '../../Estilos/theme'
-import {breakpoints} from '../../Estilos/theme'
+// import {breakpoints, colors, fonts} from '../../Estilos/theme'
+import { breakpoints } from "../../Estilos/theme"
 
-
-export default css
-`
+export default css`
 div {
     display: grid;
     height: 100vh;
@@ -18,27 +16,20 @@ div {
     }    
   `
 
-export const globalStyles = css.global `
-html,
-body {  
-  padding: 100;
-  margin: 0;
-  font-family: Poppins , sans-serif;
-}
+export const globalStyles = css.global`
+  html,
+  body {
+    padding: 100;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-* {
-  box-sizing: border-box;
-}
-
-
-
+  * {
+    box-sizing: border-box;
+  }
 `
-
-
-
-

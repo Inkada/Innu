@@ -1,48 +1,51 @@
-import Nav from '../Components/Component/Nav/Nav'
-import Bar from '../Components/Component/Charts/Bar';
+import Nav from "../Components/Component/Nav/Nav"
+import Bar from "../Components/Component/Charts/Bar"
 
+export default function Filtros() {
+  return (
+    <>
+      <div>
+        <Nav></Nav>
+        <aside>
+          <h1>Soy filtros</h1>
+          <container>
+            <span>
+              <Bar></Bar>
+            </span>
+            <span>
+              <Bar></Bar>
+            </span>
+          </container>
+          <container>
+            <span>
+              <Bar></Bar>
+            </span>
+            <span>
+              <Bar></Bar>
+            </span>
+          </container>
+        </aside>
+      </div>
 
-export default function Filtros (){
-return(<>
+      <style jsx>{`
+        div {
+          display: flex;
+        }
 
-<div>
-<Nav></Nav>
-<aside>
-<h1>Soy filtros</h1>
-<container>
-<span><Bar></Bar></span>
-<span><Bar></Bar></span>
-</container>
-<container>
-<span><Bar></Bar></span>
-<span><Bar></Bar></span>
-</container>
-</aside>
-</div>
+        container {
+          display: flex;
+          flex-direction: row;
+        }
 
-<style jsx>{`
+        span {
+          height: 200px;
+          padding: 20px;
+        }
 
-div {
-    display: flex;
-}
-
-container{
-    display: flex;
-    flex-direction: row;
-    
-}
-
-span {
-   height: 200px;
-   padding: 20px;
-}
-
-hi{
-    font-size: 2000px;
-}
-`}</style>
-</>
-
-
-)
+        hi {
+          font-size: 2000px;
+        }
+      `}</style>
+    </>
+  )
 }
