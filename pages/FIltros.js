@@ -7,8 +7,17 @@ return(<>
 
 <div>
 <Nav></Nav>
+<aside>
 <h1>Soy filtros</h1>
-<Bar></Bar>
+<container>
+<span><Bar></Bar></span>
+<span><Bar></Bar></span>
+</container>
+<container>
+<span><Bar></Bar></span>
+<span><Bar></Bar></span>
+</container>
+</aside>
 </div>
 
 <style jsx>{`
@@ -17,8 +26,15 @@ div {
     display: flex;
 }
 
-Bar{
-    max-width: 100%;
+container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+span {
+   height: 200px;
+   padding: 20px;
 }
 
 hi{

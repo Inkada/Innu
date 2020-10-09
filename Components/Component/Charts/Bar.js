@@ -30,11 +30,11 @@ export default () => ({
   render() {
     return (
       <div>
-        <h2>Bar Example (custom size)</h2>
+        <h2>Cultura de innovación barras</h2>
         <Bar
           data={data}
-          width={400}
-          height={200}
+          width={100}
+          height={100}
           options={{
             maintainAspectRatio: false
           }}
