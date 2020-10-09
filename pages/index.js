@@ -26,10 +26,15 @@ export default function Home() {
       <div>
       <p>Dashboard</p>
       <article>
+      <span> 
+      
       <section>Hey</section>
-      <section>que</section>
+      <section>que</section></span>
+      
+      <span>
+
       <section>tal</section>
-      <section>soy una seccion</section>
+      <section>soy una seccion</section></span>
       </article>
       </div>
       
@@ -47,7 +52,10 @@ main{
   flex-direction: row; 
 
 }
-article{ background-color: green}
+article{ background-color: green;
+display: flex;}
+
+
 
 section{ background-color: blue}
 

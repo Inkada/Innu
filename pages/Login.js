@@ -1,12 +1,28 @@
-import Nav from '../Components/Component/Nav/Nav'
-
+import Button from '../Components/Component/Button/Button'
+import {loginEmail} from '../Firebase/client'
+import Client from '../Firebase/client'
 
 export default function Login (){
+
+const handleClick = () => {
+loginEmail().then(user => {
+
+    console.log(user)
+} ) .catch(err => {console.log(err)
+
+})
+
+
+}
+
 return(<>
 
 
-<Nav></Nav>
+
 <h1>Soy login</h1>
+<Button Onclick={handleClick}>login whit firebase</Button>
+<Client></Client>
+
 
 
 <style jsx>{`
