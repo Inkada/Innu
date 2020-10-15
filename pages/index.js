@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Nav from "../Components/Component/Nav/Nav"
+import { colors } from "../Estilos/theme"
 
 export default function Home() {
   return (
@@ -14,8 +15,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <Nav></Nav>
         <div>
+          <Nav></Nav>
+        </div>
+        <cambiante>
           <p>Dashboard</p>
           <article>
             <span>
@@ -28,7 +31,7 @@ export default function Home() {
               <section>soy una seccion</section>
             </span>
           </article>
-        </div>
+        </cambiante>
       </main>
 
       <footer></footer>
@@ -37,6 +40,24 @@ export default function Home() {
         main {
           display: flex;
           flex-direction: row;
+          font-family: Poppins;
+        }
+
+        cambiante {
+          width: 87%;
+          margin: 15px 20px 15px 20px;
+          background-color: ${colors.base};
+        }
+
+        cambiante p {
+          margin: 15px 20px 15px 20px;
+        }
+        cambiante span {
+          margin: 15px 20px 15px 20px;
+        }
+
+        div {
+          width: 16.7%;
         }
         article {
           background-color: green;
@@ -45,6 +66,7 @@ export default function Home() {
 
         section {
           background-color: blue;
+          width: 100%;
         }
 
         p {

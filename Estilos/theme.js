@@ -8,8 +8,11 @@ export const fonts = {
 }
 
 export const colors = {
-  black: "#000000",
-  white: "#ffffff",
-  primary: "#0099ff",
-  secondary: "#1c5480",
+  violetBase: "#2F2C7B",
+  darkViolet: "#28235D",
+  yellow: "#FED325",
+  red: "#E84B42",
+  blueGreen: "#4DAC8E",
+  base: "#D2D1D1",
+  white: "000000",
 }

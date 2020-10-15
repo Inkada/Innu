@@ -1,20 +1,13 @@
 import css from "styled-jsx/css"
 
 // import {breakpoints, colors, fonts} from '../../Estilos/theme'
-import { breakpoints } from "../../Estilos/theme"
-
 export default css`
-div {
+  div {
     display: grid;
+    font-family: Poppins, sans-serif;
     height: 100vh;
   }
-  
-  @media (min-width: ${breakpoints.mobile}) {
-    main {
-      height: 90vh;
-      width: ${breakpoints.mobile};
-    }    
-  `
+`
 
 export const globalStyles = css.global`
   html,

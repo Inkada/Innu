@@ -1,22 +1,26 @@
-import Button from "../Components/Component/Button/Button"
-import Client, { loginEmail } from "../Firebase/client"
+import { useEffect, useState } from "react"
+import Client, { onAuthStateChanged } from "../Firebase/client"
 
 export default function Login() {
-  const handleClick = () => {
-    loginEmail()
-      .then((user) => {
-        console.log(user)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
+  const [user, setUser] = useState(undefined)
+
+  useEffect(() => {
+    onAuthStateChanged(setUser)
+  }, [])
 
   return (
     <>
       <h1>Soy login</h1>
-      <Button Onclick={handleClick}>login whit firebase</Button>
-      <Client></Client>
+      <Client>mi nombre es</Client>
+      <div>
+        <div>Bienvenido</div>
+        {user === null && <div>ya inició sesion</div>}
+        {user && user.avatar && (
+          <div>
+            <div>ya inició sesion</div>
+          </div>
+        )}
+      </div>
 
       <style jsx>{`
         hi {

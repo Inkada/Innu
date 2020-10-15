@@ -12,11 +12,20 @@ const firebaseConfig = {
   measurementId: "G-PVHXQXZHLK",
 }
 
-!firebase.app.length && firebase.initializeApp(firebaseConfig)
+!firebase.apps.length && firebase.initializeApp(firebaseConfig)
 
-export const loginEmail = () => {
-  const email = new firebase.auth.AuthCredential()
-  return firebase.auth().signInWithPopup(email)
+const FiretoAuth = (user) => {
+  const { email } = user
+  return {
+    email,
+  }
+}
+
+export const onAuthStateChanged = (onChange) => {
+  return firebase.auth().onAuthStateChanged((user) => {
+    const normalizedUser = FiretoAuth(user)
+    onChange(normalizedUser)
+  })
 }
 
 export default function Client() {
@@ -25,27 +34,49 @@ export default function Client() {
 
   const submit = async () => {
     await firebase.auth().createUserWithEmailAndPassword(email, password)
+    console.log(email, password)
   }
 
   return (
     <>
-      <label>Correo</label>
-      <input
-        type="email"
-        id="email"
-        onChange={(ev) => setEmail(ev.target.value)}
-      ></input>
-      <label>Contraseña</label>
-      <input
-        type="password"
-        id="password"
-        onChange={(ev) => setPassword(ev.target.value)}
-      ></input>
-      <button onClick={submit}>Confirmar</button>
+      <main>
+        <div>
+          <label>Correo</label>
+          <input
+            type="email"
+            id="email"
+            onChange={(ev) => setEmail(ev.target.value)}
+          ></input>
+        </div>
 
+        <div>
+          <label>Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            onChange={(ev) => setPassword(ev.target.value)}
+          ></input>
+        </div>
+
+        <div>
+          <button onClick={submit}>Confirmar</button>
+        </div>
+      </main>
       <style jsx>{`
+        main {
+          font-family: Poppins;
+        }
+
+        div {
+          margin-top: 20px;
+        }
+
         input {
-          background-color: aquamarine;
+          margin-left: 20px;
+        }
+
+        input {
+          font-family: Poppins;
         }
       `}</style>
     </>

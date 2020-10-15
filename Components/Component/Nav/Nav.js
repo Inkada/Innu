@@ -1,12 +1,16 @@
 import AppLayout from "../../Layout/Lay"
 import Link from "next/link"
 
+import { colors } from "../../../Estilos/theme"
+
 export default function Nav() {
   return (
     <AppLayout>
       <>
         <nav>
-          <img src="/INNU.png" alt="Logo"></img>
+          <Link href="/">
+            <img src="/INNU.png" alt="Logo"></img>
+          </Link>
           <br></br>
           <br></br>
           <description>
@@ -26,7 +30,7 @@ export default function Nav() {
                 <img src="/analisis.png" alt="Logo"></img>Análisis
               </li>
             </Link>
-            <Link href="/filtros">
+            <Link href="/fIltros">
               <li>
                 <img src="/filtros.png" alt="Logo"></img>Filtros
               </li>
@@ -60,59 +64,58 @@ export default function Nav() {
             </Link>
           </ul>
         </nav>
+
+        <style jsx>{`
+          nav {
+            display: flow-root;
+            flex-direction: column;
+            position: absolute;
+            max-width: 250px;
+            width: 16.7%;
+            height: 100vh;
+            left: 0px;
+            top: 0px;
+            cursor: pointer;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 15px;
+            background-color: ${colors.white};
+          }
+
+          nav description {
+            max-width: 2px;
+            font-size: 10px;
+            text-align: left;
+          }
+
+          nav p {
+            margin-top: 1vh;
+          }
+
+          nav img {
+            padding-top: 5vh;
+          }
+
+          nav ul {
+            list-style-type: none;
+            text-align: left;
+          }
+
+          nav li {
+            padding: 1%;
+          }
+
+          nav li img {
+            padding-right: 20px;
+          }
+
+          nav li:hover {
+            background-color: ${colors.violetBase};
+
+            color: ${colors.base};
+          }
+        `}</style>
       </>
-
-      <style jsx>{`
-        nav {
-          display: flow-root;
-          flex-direction: column;
-          position: absolute;
-          max-width: 250px;
-          width: 16.7%;
-          height: 100vh;
-          left: 0px;
-          top: 0px;
-          background-color: #ffffff;
-          cursor: pointer;
-          text-align: center;
-          font-family: "Poppins", sans-serif;
-          font-size: 15px;
-          background-color: aqua;
-        }
-
-        nav description {
-          max-width: 200px;
-          font-size: 10px;
-          text-align: left;
-        }
-
-        nav p {
-          margin-top: 1vh;
-        }
-
-        nav img {
-          padding-top: 5vh;
-        }
-
-        nav ul {
-          list-style-type: none;
-          text-align: left;
-        }
-
-        nav li {
-          padding: 1%;
-        }
-
-        nav li img {
-          padding-right: 20px;
-        }
-
-        nav li:hover {
-          background-color: purple;
-          font-size: larger;
-          color: white;
-        }
-      `}</style>
     </AppLayout>
   )
 }
