@@ -20,44 +20,29 @@ export default function Nav() {
             <p>DASHBOARD</p>
           </Link>
           <ul>
-            <Link href="/poblacion">
+            <Link href="/Poblacion">
               <li>
                 <img src="/poblacion.png" alt="Logo"></img>Población
               </li>
             </Link>
-            <Link href="/analisis">
+            <Link href="/Analisis">
               <li>
                 <img src="/analisis.png" alt="Logo"></img>Análisis
               </li>
             </Link>
-            <Link href="/fIltros">
+            <Link href="/FIltros">
               <li>
                 <img src="/filtros.png" alt="Logo"></img>Filtros
               </li>
             </Link>
-            <Link href="/proyectos">
-              <li>
-                <img src="/proyectos.png" alt="Logo"></img>Proyectos
-              </li>
-            </Link>
-            <Link href="/planes">
-              <li>
-                <img src="/planes.png" alt="Logo"></img>Planes
-              </li>
-            </Link>
           </ul>
           <ul>
-            <Link href="/configuracion">
-              <li>
-                <img src="/configuracion.png" alt="Logo"></img>Configuración
-              </li>
-            </Link>
-            <Link href="/ayuda">
+            <Link href="/Ayuda">
               <li>
                 <img src="/ayuda.png" alt="Logo"></img>Ayuda
               </li>
             </Link>
-            <Link href="/login">
+            <Link href="/Login">
               <li>
                 <img src="/salir.png" alt="Logo"></img>Salir
               </li>
