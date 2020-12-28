@@ -67,6 +67,31 @@ export default function Nav() {
             background-color: ${colors.white};
           }
 
+          ul {
+            padding: 0;
+            padding-left: 20px;
+
+            text-align: start;
+            align-content: center;
+            list-style-type: none;
+          }
+
+          li {
+            width: 100%;
+            padding: 1%;
+            padding-top: 50px;
+          }
+
+          nav li img {
+            padding-right: 20px;
+          }
+
+          li:hover {
+            background-color: ${colors.violetBase};
+            color: ${colors.base};
+            text-decoration-color: aqua;
+          }
+
           nav description {
             max-width: 2px;
             font-size: 10px;
@@ -79,25 +104,6 @@ export default function Nav() {
 
           nav img {
             padding-top: 5vh;
-          }
-
-          nav ul {
-            list-style-type: none;
-            text-align: left;
-          }
-
-          nav li {
-            padding: 1%;
-          }
-
-          nav li img {
-            padding-right: 20px;
-          }
-
-          nav li:hover {
-            background-color: ${colors.violetBase};
-
-            color: ${colors.base};
           }
         `}</style>
       </>

@@ -65,7 +65,7 @@ export default function Home() {
         }
 
         section {
-          background-color: blue;
+          background-color: red;
           width: 100%;
         }
 
