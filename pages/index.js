@@ -1,8 +1,19 @@
 import Head from "next/head"
 import Nav from "../Components/Component/Nav/Nav"
 import { colors } from "../Estilos/theme"
+import { useEffect } from "react"
+import { useAppContext } from "../Hooks/Contex"
+
+const FirebaseContext = React.createContext
 
 export default function Home() {
+  const { variableState, setVariableState } = useAppContext()
+
+  //ComponentDidMouunt
+  useEffect(() => {
+    setVariableState(true)
+  }, [variableState])
+
   return (
     <>
       <Head>
@@ -22,7 +33,10 @@ export default function Home() {
           <p>Dashboard</p>
           <article>
             <span>
-              <section>Hey</section>
+              <section>
+                Hey
+                <h1 className="title">CONTEXT APP {`${variableState}`}</h1>
+              </section>
               <section>que</section>
             </span>
 
