@@ -1,51 +1,58 @@
 import { Radar } from "react-chartjs-2"
+import { colors } from "../../../Estilos/theme"
+import { Med1 } from "../../../Hooks/Med1"
+import { Med2 } from "../../../Hooks/Med2"
+
+console.log(Med1)
 
 const data = {
   labels: [
-    "Eating",
-    "Drinking",
-    "Sleeping",
-    "Designing",
-    "Coding",
-    "Cycling",
-    "Running",
+    "Recursos",
+    "Negocio",
+    "Creatividad",
+    "Educación",
+    "Intención de innovación",
+    "Empresa",
+    "Equipo",
+    "Comunicación",
   ],
   datasets: [
     {
-      label: "My First dataset",
-      backgroundColor: "rgba(179,181,198,0.2)",
-      borderColor: "rgba(179,181,198,1)",
-      pointBackgroundColor: "rgba(179,181,198,1)",
-      pointBorderColor: "#fff",
-      pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: "rgba(179,181,198,1)",
-      data: [65, 59, 90, 81, 56, 55, 40],
+      label: "Medición fecha1",
+      backgroundColor: colors.red,
+      borderColor: colors.red,
+      pointBackgroundColor: colors.red,
+      pointBorderColor: colors.red,
+      data: Med1,
     },
     {
-      label: "My Second dataset",
-      backgroundColor: "rgba(255,99,132,0.2)",
-      borderColor: "rgba(255,99,132,1)",
-      pointBackgroundColor: "rgba(255,99,132,1)",
-      pointBorderColor: "#fff",
-      pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: "rgba(255,99,132,1)",
-      data: [28, 48, 40, 19, 96, 27, 100],
+      label: "Medición fecha2",
+      backgroundColor: colors.yellow,
+      borderColor: colors.yellow,
+      pointBackgroundColor: colors.yellow,
+      pointBorderColor: colors.yellow,
+      pointHoverBackgroundColor: colors.yellow,
+      pointHoverBorderColor: colors.yellow,
+      data: Med2,
     },
   ],
 }
 
 export default () => ({
-  displayName: "RadarExample",
+  displayName: "Gráfica Radar",
   render() {
     return (
       <div>
         <h2>Cultura de innovación Radar</h2>
+
         <Radar
           data={data}
-          width={400}
-          height={400}
           options={{
-            maintainAspectRatio: false,
+            legend: {
+              display: true,
+              align: "start",
+            },
+            maintainAspectRatio: true,
             responsive: true,
           }}
         />

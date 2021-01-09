@@ -17,6 +17,8 @@ export default () => ({
 
           div {
             background-color: ${colors.darkViolet};
+            border-radius: 6px;
+            width: 100%;
           }
         `}</style>
       </>

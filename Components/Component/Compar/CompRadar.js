@@ -5,15 +5,19 @@ export default () => ({
   render() {
     return (
       <>
-        <contendor>
-          <Radar></Radar>
-        </contendor>
+        <div>
+          <contendor>
+            <Radar></Radar>
+          </contendor>
+        </div>
         <style jsx>{`
-          * {
-            background-color: ${colors.base};
+          contendor {
+            width: 100%;
           }
 
-          contendor {
+          div {
+            background-color: ${colors.white};
+            border-radius: 6px;
             width: 100%;
           }
         `}</style>

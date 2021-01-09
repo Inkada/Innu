@@ -77,10 +77,10 @@ export default function Home() {
         }
 
         cambiante p {
-          margin: 15px 20px 15px 20px;
+          margin: 0px 20px 15px 20px;
         }
         cambiante span {
-          margin: 15px 20px 15px 20px;
+          margin: 0px 20px 15px 20px;
         }
 
         div {
@@ -95,7 +95,8 @@ export default function Home() {
         }
 
         p {
-          font-size: 30px;
+          font-size: 25px;
+          padding-top: 10px;
         }
       `}</style>
     </>
