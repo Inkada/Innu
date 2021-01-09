@@ -1,6 +1,12 @@
 import Head from "next/head"
+
 import Nav from "../Components/Component/Nav/Nav"
+
+import CompBar from "../Components/Component/Compar/CompBar"
+import CompRadar from "../Components/Component/Compar/CompRadar"
+
 import { colors } from "../Estilos/theme"
+
 import { useEffect } from "react"
 import { useAppContext } from "../Hooks/Contex"
 
@@ -34,15 +40,20 @@ export default function Home() {
           <article>
             <span>
               <section>
-                Hey
-                <h1 className="title">CONTEXT APP {`${variableState}`}</h1>
+                <CompBar></CompBar>
               </section>
-              <section>que</section>
+              <section>
+                <CompRadar></CompRadar>
+              </section>
             </span>
 
             <span>
-              <section>tal</section>
-              <section>soy una seccion</section>
+              <section>
+                <CompRadar></CompRadar>
+              </section>
+              <section>
+                <CompRadar></CompRadar>
+              </section>
             </span>
           </article>
         </cambiante>
@@ -57,9 +68,11 @@ export default function Home() {
           font-family: Poppins;
         }
 
+        span {
+          width: 50%;
+        }
         cambiante {
           width: 87%;
-          margin: 15px 20px 15px 20px;
           background-color: ${colors.base};
         }
 
@@ -74,12 +87,10 @@ export default function Home() {
           width: 16.7%;
         }
         article {
-          background-color: green;
           display: flex;
         }
 
         section {
-          background-color: red;
           width: 100%;
         }
 

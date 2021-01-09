@@ -14,7 +14,7 @@ export default function Nav() {
           <br></br>
           <br></br>
           <description>
-            Midiend o la cultura de innovación en las empresas
+            Midiendo la cultura de innovación en las empresas
           </description>
           <Link href="/">
             <p>DASHBOARD</p>
