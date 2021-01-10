@@ -16,7 +16,6 @@ const data = {
     Varibales[7],
   ],
   datasets: [
-    { label: "Periodos", display: false },
     {
       label: "Medición 1",
       barThickness: 8,
@@ -57,12 +56,20 @@ export default () => ({
   render() {
     return (
       <div>
-        <h2>Cultura de innovación barras</h2>
         <Bar
           data={data}
           options={{
             maintainAspectRatio: true,
             responsive: true,
+
+            layout: {
+              padding: {
+                left: 10,
+                right: 0,
+                top: 0,
+                bottom: 0,
+              },
+            },
 
             legend: {
               labels: {
@@ -95,13 +102,7 @@ export default () => ({
             },
           }}
         />
-        <style jsx>{`
-          h2 {
-            color: ${colors.white};
-            font-size: 20px;
-            padding: 5px 0px 0px 20px;
-          }
-        `}</style>
+        <style jsx>{``}</style>
       </div>
     )
   },

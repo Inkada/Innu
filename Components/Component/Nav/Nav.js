@@ -9,13 +9,13 @@ export default function Nav() {
       <>
         <nav>
           <Link href="/">
-            <img src="/INNU.png" alt="Logo"></img>
+            <div>
+              <img src="/INNU.png" alt="Logo"></img>
+            </div>
           </Link>
           <br></br>
           <br></br>
-          <description>
-            Midiendo la cultura de innovación en las empresas
-          </description>
+
           <Link href="/">
             <p>DASHBOARD</p>
           </Link>
@@ -78,8 +78,9 @@ export default function Nav() {
 
           li {
             width: 100%;
-            padding: 1%;
-            padding-top: 50px;
+            margin: 1%;
+            margin-top: 25px;
+            height: 30px;
           }
 
           nav li img {
@@ -92,18 +93,16 @@ export default function Nav() {
             text-decoration-color: aqua;
           }
 
-          nav description {
-            max-width: 2px;
-            font-size: 10px;
-            text-align: left;
-          }
-
           nav p {
             margin-top: 1vh;
           }
 
           nav img {
-            padding-top: 5vh;
+            padding-top: 5 px;
+          }
+
+          div {
+            margin-top: 3vh;
           }
         `}</style>
       </>

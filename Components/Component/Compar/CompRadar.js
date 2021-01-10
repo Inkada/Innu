@@ -9,6 +9,7 @@ export default () => ({
           <contendor>
             <Radar></Radar>
           </contendor>
+          <br></br>
         </div>
         <style jsx>{`
           contendor {
@@ -18,7 +19,8 @@ export default () => ({
           div {
             background-color: ${colors.white};
             border-radius: 6px;
-            width: 100%;
+            width: 95%;
+            max-height: 45h;
           }
         `}</style>
       </>

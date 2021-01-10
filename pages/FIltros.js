@@ -1,49 +1,102 @@
+import Head from "next/head"
+
 import Nav from "../Components/Component/Nav/Nav"
-import Bar from "../Components/Component/Charts/Bar"
+
+import CompBar from "../Components/Component/Compar/CompBar"
+import CompRadar from "../Components/Component/Compar/CompRadar"
+
+import { colors } from "../Estilos/theme"
+
+import { useEffect } from "react"
+import { useAppContext } from "../Hooks/Contex"
+
+const FirebaseContext = React.createContext
 
 export default function Filtros() {
+  const { variableState, setVariableState } = useAppContext()
+
+  //ComponentDidMouunt
+  useEffect(() => {
+    setVariableState(true)
+  }, [variableState])
+
   return (
     <>
-      <div>
-        <Nav></Nav>
-        <aside>
-          <h1>Soy filtros</h1>
-          <container>
+      <Head>
+        <title>Innu </title>
+        <link rel="icon" href="/innufavicon.png" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+      <main>
+        <div>
+          <Nav></Nav>
+        </div>
+        <cambiante>
+          <p>Filtros</p>
+          <article>
             <span>
-              <Bar></Bar>
+              <section>
+                <CompBar></CompBar>
+              </section>
+              <section>
+                <CompRadar></CompRadar>
+              </section>
             </span>
+
             <span>
-              <Bar></Bar>
+              <section>
+                <CompRadar></CompRadar>
+              </section>
+              <section>
+                <CompRadar></CompRadar>
+              </section>
             </span>
-          </container>
-          <container>
-            <span>
-              <Bar></Bar>
-            </span>
-            <span>
-              <Bar></Bar>
-            </span>
-          </container>
-        </aside>
-      </div>
+          </article>
+        </cambiante>
+      </main>
+
+      <footer></footer>
 
       <style jsx>{`
-        div {
-          display: flex;
-        }
-
-        container {
+        main {
           display: flex;
           flex-direction: row;
+          font-family: Poppins;
         }
 
         span {
-          height: 200px;
-          padding: 20px;
+          width: 50%;
+        }
+        cambiante {
+          width: 87%;
+          background-color: ${colors.base};
         }
 
-        hi {
-          font-size: 2000px;
+        cambiante p {
+          margin: 0px 20px 15px 20px;
+        }
+        cambiante span {
+          margin: 0px 20px 15px 20px;
+        }
+
+        div {
+          width: 16.7%;
+        }
+        article {
+          display: flex;
+        }
+
+        section {
+          width: 100%;
+        }
+
+        p {
+          font-size: 25px;
+          padding-top: 10px;
         }
       `}</style>
     </>

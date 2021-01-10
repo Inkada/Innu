@@ -43,7 +43,7 @@ export default () => ({
   render() {
     return (
       <div>
-        <h2>Cultura de innovación Radar</h2>
+        <h2>Radar variables innu</h2>
 
         <Radar
           data={data}
@@ -54,8 +54,22 @@ export default () => ({
             },
             maintainAspectRatio: true,
             responsive: true,
+
+            scale: {
+              angleLines: {
+                display: true,
+              },
+            },
           }}
         />
+
+        <style jsx>{`
+          h2 {
+            color: ${colors.darkViolet};
+            font-size: 20px;
+            padding: 5px 0px 0px 20px;
+          }
+        `}</style>
       </div>
     )
   },

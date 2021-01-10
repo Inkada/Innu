@@ -43,16 +43,16 @@ export default function Home() {
                 <CompBar></CompBar>
               </section>
               <section>
-                <CompRadar></CompRadar>
+                <CompBar></CompBar>
               </section>
             </span>
 
             <span>
               <section>
-                <CompRadar></CompRadar>
+                <CompBar></CompBar>
               </section>
               <section>
-                <CompRadar></CompRadar>
+                <CompBar></CompBar>
               </section>
             </span>
           </article>
@@ -66,6 +66,7 @@ export default function Home() {
           display: flex;
           flex-direction: row;
           font-family: Poppins;
+          max-height: 100%;
         }
 
         span {

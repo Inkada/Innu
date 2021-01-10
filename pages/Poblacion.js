@@ -1,37 +1,98 @@
-import Nav from "../Components/Component/Nav/Nav"
 import Csv from "../Components/Component/CsvReader/CsvReader"
+
+import Head from "next/head"
+
+import Nav from "../Components/Component/Nav/Nav"
+
+import CompBar from "../Components/Component/Compar/CompBar"
+import CompRadar from "../Components/Component/Compar/CompRadar"
+
 import { colors } from "../Estilos/theme"
 
+import { useEffect } from "react"
+import { useAppContext } from "../Hooks/Contex"
+
+const FirebaseContext = React.createContext
+
 export default function Poblacion() {
+  const { variableState, setVariableState } = useAppContext()
+
+  //ComponentDidMouunt
+  useEffect(() => {
+    setVariableState(true)
+  }, [variableState])
+
   return (
     <>
+      <Head>
+        <title>Innu </title>
+        <link rel="icon" href="/innufavicon.png" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
       <main>
         <div>
           <Nav></Nav>
         </div>
-        <article>
-          <h1>Soy población</h1>
-          <Csv></Csv>
-        </article>
+        <cambiante>
+          <p>Población</p>
+          <article>
+            <span>
+              <section>
+                <CompBar></CompBar> <Csv></Csv>
+              </section>
+              <section></section>
+            </span>
+
+            <span>
+              <section></section>
+              <section></section>
+            </span>
+          </article>
+        </cambiante>
       </main>
+
+      <footer></footer>
 
       <style jsx>{`
         main {
           display: flex;
           flex-direction: row;
+          font-family: Poppins;
         }
-        div {
-          width: 16.7%;
+
+        span {
+          width: 50%;
+        }
+        cambiante {
+          width: 87%;
           background-color: ${colors.base};
         }
 
+        cambiante p {
+          margin: 0px 20px 15px 20px;
+        }
+        cambiante span {
+          margin: 0px 20px 15px 20px;
+        }
+
+        div {
+          width: 16.7%;
+        }
         article {
           display: flex;
-          flex-direction: column;
-          margin-left: 20px;
         }
-        hi {
-          font-size: 2000px;
+
+        section {
+          width: 100%;
+        }
+
+        p {
+          font-size: 25px;
+          padding-top: 10px;
         }
       `}</style>
     </>
