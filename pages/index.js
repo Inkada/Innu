@@ -37,24 +37,22 @@ export default function Home() {
         </div>
         <cambiante>
           <p>Dashboard</p>
-          <article>
-            <span>
-              <section>
-                <CompBar></CompBar>
-              </section>
-              <section>
-                <CompBar></CompBar>
-              </section>
-            </span>
 
-            <span>
-              <section>
+          <article>
+            <section>
+              <span>
                 <CompBar></CompBar>
-              </section>
-              <section>
+              </span>
+              <span>
+                <CompRadar></CompRadar>
+              </span>
+              <span>
                 <CompBar></CompBar>
-              </section>
-            </span>
+              </span>
+              <span>
+                <CompBar></CompBar>
+              </span>
+            </section>
           </article>
         </cambiante>
       </main>
@@ -67,34 +65,37 @@ export default function Home() {
           flex-direction: row;
           font-family: Poppins;
           max-height: 100%;
+          width: 100%;
         }
 
-        span {
-          width: 50%;
-        }
         cambiante {
-          width: 87%;
+          width: 83.3%;
+          max-height: 100%;
           background-color: ${colors.base};
         }
-
-        cambiante p {
-          margin: 0px 20px 15px 20px;
-        }
-        cambiante span {
-          margin: 0px 20px 15px 20px;
-        }
-
         div {
           width: 16.7%;
         }
+
+        cambiante p {
+          margin: 0px 0px 15px 20px;
+        }
+        cambiante span {
+          margin: 0px 0px 15px 20px;
+        }
+
         article {
           display: flex;
         }
 
         section {
-          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          max-height: 100vh;
         }
-
+        span {
+          width: 47.5%;
+        }
         p {
           font-size: 25px;
           padding-top: 10px;

@@ -19,7 +19,6 @@ const data = {
   datasets: [
     {
       label: "Medición fecha1",
-      backgroundColor: colors.red,
       borderColor: colors.red,
       pointBackgroundColor: colors.red,
       pointBorderColor: colors.red,
@@ -27,12 +26,10 @@ const data = {
     },
     {
       label: "Medición fecha2",
-      backgroundColor: colors.yellow,
       borderColor: colors.yellow,
       pointBackgroundColor: colors.yellow,
       pointBorderColor: colors.yellow,
-      pointHoverBackgroundColor: colors.yellow,
-      pointHoverBorderColor: colors.yellow,
+
       data: Med2,
     },
   ],
@@ -43,14 +40,14 @@ export default () => ({
   render() {
     return (
       <div>
-        <h2>Radar variables innu</h2>
-
         <Radar
           data={data}
+          max-width={400}
           options={{
             legend: {
               display: true,
               align: "start",
+              fontColor: colors.white,
             },
             maintainAspectRatio: true,
             responsive: true,
@@ -58,18 +55,16 @@ export default () => ({
             scale: {
               angleLines: {
                 display: true,
+                fontColor: colors.white,
+              },
+              ticks: {
+                fontColor: colors.white,
               },
             },
           }}
         />
 
-        <style jsx>{`
-          h2 {
-            color: ${colors.darkViolet};
-            font-size: 20px;
-            padding: 5px 0px 0px 20px;
-          }
-        `}</style>
+        <style jsx>{``}</style>
       </div>
     )
   },

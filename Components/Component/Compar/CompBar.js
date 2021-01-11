@@ -11,11 +11,10 @@ export default () => ({
           <contendor>
             <Bar></Bar>
           </contendor>
-          <br></br>
         </div>
         <style jsx>{`
           contendor {
-            width: 100%;
+            width: 90%;
           }
 
           div {

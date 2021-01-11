@@ -61,13 +61,12 @@ export default () => ({
           options={{
             maintainAspectRatio: true,
             responsive: true,
-
             layout: {
               padding: {
                 left: 10,
-                right: 0,
-                top: 0,
-                bottom: 0,
+              },
+              margin: {
+                bottom: 200,
               },
             },
 
@@ -83,6 +82,7 @@ export default () => ({
                 {
                   ticks: {
                     beginAtZero: true,
+                    fontColor: colors.white,
                   },
                   gridLines: {
                     display: false,
@@ -93,6 +93,7 @@ export default () => ({
                 {
                   ticks: {
                     beginAtZero: true,
+                    fontColor: colors.white,
                   },
                   gridLines: {
                     display: false,
