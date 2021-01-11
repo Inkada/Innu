@@ -4,6 +4,8 @@ import Nav from "../Components/Component/Nav/Nav"
 
 import CompBar from "../Components/Component/Compar/CompBar"
 import CompRadar from "../Components/Component/Compar/CompRadar"
+import MedProcess from "../Components/Component/Compar/MedProcess"
+import Recomendations from "../Components/Component/Compar/Recomendations"
 
 import { colors } from "../Estilos/theme"
 
@@ -47,10 +49,10 @@ export default function Home() {
                 <CompRadar></CompRadar>
               </span>
               <span>
-                <CompBar></CompBar>
+                <MedProcess></MedProcess>
               </span>
               <span>
-                <CompBar></CompBar>
+                <Recomendations></Recomendations>
               </span>
             </section>
           </article>

@@ -47,18 +47,27 @@ export default () => ({
             legend: {
               display: true,
               align: "start",
-              fontColor: colors.white,
+              labels: {
+                fontColor: colors.white,
+              },
             },
             maintainAspectRatio: true,
             responsive: true,
+            pointLabels: { fontColor: colors.white },
 
             scale: {
               angleLines: {
                 display: true,
-                fontColor: colors.white,
+                color: colors.white,
+              },
+              gridLines: {
+                color: colors.white,
+              },
+              pointLabels: {
+                color: colors.white,
               },
               ticks: {
-                fontColor: colors.white,
+                backdropColor: colors.darkViolet,
               },
             },
           }}
